@@ -1,0 +1,91 @@
+date,region,category,product,quantity,unit_price,sales_rep
+2026-01-01,Tokyo,Food,Tea,8,450,Sato
+2026-01-02,Fukuoka,Electronics,Keyboard,5,4200,Sato
+2026-01-03,Tokyo,Stationery,Pen Set,18,150,Sato
+2026-01-04,Fukuoka,Food,Tea,16,450,Sato
+2026-01-05,Osaka,Stationery,Notebook,15,320,Tanaka
+2026-01-06,Nagoya,Food,Coffee,13,580,Tanaka
+2026-01-07,Osaka,Electronics,Mouse,4,1800,Tanaka
+2026-01-08,Nagoya,Stationery,Notebook,12,320,Tanaka
+2026-01-09,Osaka,Food,Coffee,10,580,Tanaka
+2026-01-10,Nagoya,Electronics,Mouse,12,1800,Tanaka
+2026-01-11,Osaka,Stationery,Notebook,20,320,Tanaka
+2026-01-12,Tokyo,Food,Snack Box,13,720,Yamada
+2026-01-13,Fukuoka,Electronics,USB Cable,4,900,Yamada
+2026-01-14,Tokyo,Stationery,Marker,12,220,Yamada
+2026-01-15,Fukuoka,Food,Snack Box,11,720,Yamada
+2026-01-16,Tokyo,Electronics,USB Cable,8,900,Yamada
+2026-01-17,Fukuoka,Stationery,Marker,21,220,Yamada
+2026-01-18,Tokyo,Food,Snack Box,19,720,Yamada
+2026-01-19,Nagoya,Stationery,Pen Set,12,150,Suzuki
+2026-01-20,Osaka,Food,Tea,10,450,Suzuki
+2026-01-21,Nagoya,Electronics,Keyboard,7,4200,Suzuki
+2026-01-22,Osaka,Stationery,Pen Set,15,150,Suzuki
+2026-01-23,Nagoya,Food,Tea,13,450,Suzuki
+2026-01-24,Osaka,Electronics,Keyboard,15,4200,Suzuki
+2026-01-25,Nagoya,Stationery,Pen Set,17,150,Suzuki
+2026-01-26,Fukuoka,Electronics,Mouse,6,1800,Sato
+2026-01-27,Tokyo,Stationery,Notebook,14,320,Sato
+2026-01-28,Fukuoka,Food,Coffee,12,580,Sato
+2026-01-29,Tokyo,Electronics,Mouse,10,1800,Sato
+2026-01-30,Fukuoka,Stationery,Notebook,18,320,Sato
+2026-01-31,Tokyo,Food,Coffee,15,580,Sato
+2026-02-01,Fukuoka,Electronics,Mouse,12,1800,Sato
+2026-02-02,Osaka,Stationery,Marker,15,220,Tanaka
+2026-02-03,Nagoya,Food,Snack Box,13,720,Tanaka
+2026-02-04,Osaka,Electronics,USB Cable,10,900,Tanaka
+2026-02-05,Nagoya,Stationery,Marker,18,220,Tanaka
+2026-02-06,Osaka,Food,Snack Box,10,720,Tanaka
+2026-02-07,Nagoya,Electronics,USB Cable,12,900,Tanaka
+2026-02-08,Osaka,Stationery,Marker,20,220,Tanaka
+2026-02-09,Tokyo,Electronics,Keyboard,9,4200,Yamada
+2026-02-10,Fukuoka,Stationery,Pen Set,17,150,Yamada
+2026-02-11,Tokyo,Food,Tea,15,450,Yamada
+2026-02-12,Fukuoka,Electronics,Keyboard,7,4200,Yamada
+2026-02-13,Tokyo,Stationery,Pen Set,15,150,Yamada
+2026-02-14,Fukuoka,Food,Tea,18,450,Yamada
+2026-02-15,Tokyo,Electronics,Keyboard,15,4200,Yamada
+2026-02-16,Nagoya,Food,Coffee,15,580,Suzuki
+2026-02-17,Osaka,Electronics,Mouse,12,1800,Suzuki
+2026-02-18,Nagoya,Stationery,Notebook,14,320,Suzuki
+2026-02-19,Osaka,Food,Coffee,12,580,Suzuki
+2026-02-20,Nagoya,Electronics,Mouse,9,1800,Suzuki
+2026-02-21,Osaka,Stationery,Notebook,22,320,Suzuki
+2026-02-22,Nagoya,Food,Coffee,20,580,Suzuki
+2026-02-23,Fukuoka,Electronics,USB Cable,12,900,Sato
+2026-02-24,Tokyo,Stationery,Marker,14,220,Sato
+2026-02-25,Fukuoka,Food,Snack Box,12,720,Sato
+2026-02-26,Tokyo,Electronics,USB Cable,10,900,Sato
+2026-02-27,Fukuoka,Stationery,Marker,18,220,Sato
+2026-02-28,Tokyo,Food,Snack Box,21,720,Sato
+2026-03-01,Fukuoka,Electronics,USB Cable,18,900,Sato
+2026-03-02,Osaka,Food,Tea,12,450,Tanaka
+2026-03-03,Nagoya,Electronics,Keyboard,9,4200,Tanaka
+2026-03-04,Osaka,Stationery,Pen Set,17,150,Tanaka
+2026-03-05,Nagoya,Food,Tea,15,450,Tanaka
+2026-03-06,Osaka,Electronics,Keyboard,12,4200,Tanaka
+2026-03-07,Nagoya,Stationery,Pen Set,25,150,Tanaka
+2026-03-08,Osaka,Food,Tea,17,450,Tanaka
+2026-03-09,Tokyo,Stationery,Notebook,16,320,Yamada
+2026-03-10,Fukuoka,Food,Coffee,14,580,Yamada
+2026-03-11,Tokyo,Electronics,Mouse,11,1800,Yamada
+2026-03-12,Fukuoka,Stationery,Notebook,20,320,Yamada
+2026-03-13,Tokyo,Food,Coffee,18,580,Yamada
+2026-03-14,Fukuoka,Electronics,Mouse,14,1800,Yamada
+2026-03-15,Tokyo,Stationery,Notebook,22,320,Yamada
+2026-03-16,Nagoya,Food,Snack Box,15,720,Suzuki
+2026-03-17,Osaka,Electronics,USB Cable,12,900,Suzuki
+2026-03-18,Nagoya,Stationery,Marker,20,220,Suzuki
+2026-03-19,Osaka,Food,Snack Box,18,720,Suzuki
+2026-03-20,Nagoya,Electronics,USB Cable,9,900,Suzuki
+2026-03-21,Osaka,Stationery,Marker,22,220,Suzuki
+2026-03-22,Nagoya,Food,Snack Box,20,720,Suzuki
+2026-03-23,Fukuoka,Stationery,Pen Set,19,150,Sato
+2026-03-24,Tokyo,Food,Tea,17,450,Sato
+2026-03-25,Fukuoka,Electronics,Keyboard,14,4200,Sato
+2026-03-26,Tokyo,Stationery,Pen Set,17,150,Sato
+2026-03-27,Fukuoka,Food,Tea,15,450,Sato
+2026-03-28,Tokyo,Electronics,Keyboard,17,4200,Sato
+2026-03-29,Fukuoka,Stationery,Pen Set,25,150,Sato
+2026-03-30,Osaka,Electronics,Mouse,14,1800,Tanaka
+2026-03-31,Nagoya,Stationery,Notebook,22,320,Tanaka
