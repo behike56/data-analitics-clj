@@ -1,0 +1,51 @@
+# 検証コマンド用のルール。
+#
+# テストや lint は有用ですが、プロジェクトが定義したコードやツールを実行します。
+# 配布用の共通ルールでは、sandbox 外での実行を自動許可せず、ユーザー確認を
+# 残します。
+
+prefix_rule(
+    pattern = [["pytest", "ruff", "mypy"]],
+    decision = "prompt",
+    justification = "Python 検証コマンドはプロジェクトが選択したコードやツールを実行するため確認します。",
+    match = [
+        "pytest",
+        "pytest tests",
+        "ruff check .",
+        "mypy src",
+    ],
+)
+
+prefix_rule(
+    pattern = ["uv", "run", ["pytest", "ruff", "mypy"]],
+    decision = "prompt",
+    justification = "uv run 経由の検証コマンドはプロジェクトが選択したコードやツールを実行するため確認します。",
+    match = [
+        "uv run pytest",
+        "uv run ruff check .",
+        "uv run mypy src",
+    ],
+)
+
+prefix_rule(
+    pattern = ["npm", ["test", "run"]],
+    decision = "prompt",
+    justification = "npm scripts はプロジェクト定義のコマンドを実行するため確認します。",
+    match = [
+        "npm test",
+        "npm run test",
+        "npm run lint",
+    ],
+)
+
+prefix_rule(
+    pattern = [["pnpm", "yarn"], ["test", "run"]],
+    decision = "prompt",
+    justification = "パッケージマネージャの scripts はプロジェクト定義のコマンドを実行するため確認します。",
+    match = [
+        "pnpm test",
+        "pnpm run lint",
+        "yarn test",
+        "yarn run lint",
+    ],
+)
