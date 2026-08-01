@@ -78,4 +78,4 @@ jobs:
         run: clojure -X:test
 
       - name: Load application namespaces
-        run: clojure -M -e "(require 'core 'plot)"
+        run: clojure -M -e "(require 'core 'plot 'statistics.core)"
