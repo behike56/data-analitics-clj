@@ -1,0 +1,44 @@
+# 配布用の共通 Codex execpolicy ルール。
+#
+# このファイルは意図的に小さく保ちます。ここで定義するルールは、Codex が
+# sandbox 外で実行しようとするコマンドに適用されます。そのため、`cat`、
+# `find`、`python` のような広範なファイル読み取りにつながる allow は避けます。
+# `git diff --no-index` や `git branch -D` のように危険なフラグを取り得る
+# Git コマンドは、allow ではなく prompt 側のルールに分けます。
+
+prefix_rule(
+    pattern = ["pwd"],
+    decision = "allow",
+    justification = "現在の作業ディレクトリの確認は低リスクなため許可します。",
+    match = [
+        "pwd",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", [
+        "status",
+        "ls-files",
+        "ls-tree",
+        "rev-parse",
+        "rev-list",
+    ]],
+    decision = "allow",
+    justification = "低リスクな Git リポジトリメタデータの確認のみ許可します。",
+    match = [
+        "git status",
+        "git ls-files",
+        "git ls-tree HEAD",
+        "git rev-parse --show-toplevel",
+        "git rev-list --max-count=1 HEAD",
+    ],
+    not_match = [
+        "git diff",
+        "git log --oneline",
+        "git branch -D main",
+        "git add .",
+        "git commit -m change",
+        "git push origin main",
+        "git fetch origin",
+    ],
+)

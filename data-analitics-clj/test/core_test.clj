@@ -1,6 +1,6 @@
 (ns core-test
-  (:require [clojure.test :refer [deftest is testing]]
-            [core :as sut]
+  (:require [basics.statistics :as sut]
+            [clojure.test :refer [deftest is testing]]
             [tablecloth.api :as tc]))
 
 (deftest average-test
