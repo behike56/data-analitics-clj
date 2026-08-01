@@ -1,0 +1,42 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/check-bash/check-bash.sh\"",
+            "timeout": 5,
+            "statusMessage": "Bash コマンドの安全性を確認しています"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "apply_patch|Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/python-quality-gate/python-quality-gate.sh\" run-post-tool",
+            "timeout": 600,
+            "statusMessage": "Python 品質ゲートを実行しています"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$(git rev-parse --show-toplevel)/.codex/hooks/python-quality-gate/python-quality-gate.sh\" stop",
+            "timeout": 30,
+            "statusMessage": "Python 品質ゲートの状態を確認しています"
+          }
+        ]
+      }
+    ]
+  }
+}

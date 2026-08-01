@@ -1,0 +1,181 @@
+date,region,product_id,product_name,category,weekday,is_weekend,weather,temperature,promotion,discount_rate,unit_price,quantity_sold,sales_amount
+2026-01-01,Osaka,P001,Green Tea,Drink,Thu,0,cloudy,7,0,0.00,450,26,11700
+2026-01-01,Nagoya,P002,Coffee Beans,Drink,Thu,0,rainy,10,0,0.00,980,8,7840
+2026-01-01,Fukuoka,P003,Notebook,Stationery,Thu,0,sunny,9,0,0.00,320,18,5760
+2026-01-01,Tokyo,P004,USB Cable,Electronics,Thu,0,sunny,12,1,0.10,900,21,17010
+2026-01-02,Nagoya,P001,Green Tea,Drink,Fri,0,rainy,9,0,0.00,450,20,9000
+2026-01-02,Fukuoka,P002,Coffee Beans,Drink,Fri,0,sunny,11,0,0.00,980,20,19600
+2026-01-02,Tokyo,P003,Notebook,Stationery,Fri,0,sunny,11,0,0.00,320,20,6400
+2026-01-02,Osaka,P004,USB Cable,Electronics,Fri,0,cloudy,8,0,0.00,900,9,8100
+2026-01-03,Fukuoka,P001,Green Tea,Drink,Sat,1,sunny,10,0,0.00,450,31,13950
+2026-01-03,Tokyo,P002,Coffee Beans,Drink,Sat,1,sunny,13,0,0.00,980,30,29400
+2026-01-03,Osaka,P003,Notebook,Stationery,Sat,1,cloudy,7,0,0.00,320,25,8000
+2026-01-03,Nagoya,P004,USB Cable,Electronics,Sat,1,rainy,10,0,0.00,900,10,9000
+2026-01-04,Tokyo,P001,Green Tea,Drink,Sun,1,sunny,11,0,0.00,450,33,14850
+2026-01-04,Osaka,P002,Coffee Beans,Drink,Sun,1,cloudy,9,0,0.00,980,23,22540
+2026-01-04,Nagoya,P003,Notebook,Stationery,Sun,1,rainy,8,1,0.15,320,31,8432
+2026-01-04,Fukuoka,P004,USB Cable,Electronics,Sun,1,sunny,11,0,0.00,900,18,16200
+2026-01-05,Osaka,P001,Green Tea,Drink,Mon,0,cloudy,8,0,0.00,450,27,12150
+2026-01-05,Nagoya,P002,Coffee Beans,Drink,Mon,0,rainy,10,0,0.00,980,9,8820
+2026-01-05,Fukuoka,P003,Notebook,Stationery,Mon,0,sunny,10,0,0.00,320,19,6080
+2026-01-05,Tokyo,P004,USB Cable,Electronics,Mon,0,cloudy,12,0,0.00,900,14,12600
+2026-01-06,Nagoya,P001,Green Tea,Drink,Tue,0,rainy,9,0,0.00,450,21,9450
+2026-01-06,Fukuoka,P002,Coffee Beans,Drink,Tue,0,sunny,12,0,0.00,980,21,20580
+2026-01-06,Tokyo,P003,Notebook,Stationery,Tue,0,cloudy,11,0,0.00,320,18,5760
+2026-01-06,Osaka,P004,USB Cable,Electronics,Tue,0,rainy,14,0,0.00,900,11,9900
+2026-01-07,Fukuoka,P001,Green Tea,Drink,Wed,0,sunny,10,0,0.00,450,24,10800
+2026-01-07,Tokyo,P002,Coffee Beans,Drink,Wed,0,cloudy,13,1,0.15,980,27,22491
+2026-01-07,Osaka,P003,Notebook,Stationery,Wed,0,rainy,12,0,0.00,320,24,7680
+2026-01-07,Nagoya,P004,USB Cable,Electronics,Wed,0,sunny,10,0,0.00,900,10,9000
+2026-01-08,Tokyo,P001,Green Tea,Drink,Thu,0,cloudy,12,0,0.00,450,23,10350
+2026-01-08,Osaka,P002,Coffee Beans,Drink,Thu,0,rainy,14,0,0.00,980,13,12740
+2026-01-08,Nagoya,P003,Notebook,Stationery,Thu,0,sunny,9,0,0.00,320,23,7360
+2026-01-08,Fukuoka,P004,USB Cable,Electronics,Thu,0,sunny,11,0,0.00,900,16,14400
+2026-01-09,Osaka,P001,Green Tea,Drink,Fri,0,rainy,13,0,0.00,450,17,7650
+2026-01-09,Nagoya,P002,Coffee Beans,Drink,Fri,0,sunny,11,0,0.00,980,17,16660
+2026-01-09,Fukuoka,P003,Notebook,Stationery,Fri,0,sunny,10,0,0.00,320,21,6720
+2026-01-09,Tokyo,P004,USB Cable,Electronics,Fri,0,cloudy,13,0,0.00,900,16,14400
+2026-01-10,Nagoya,P001,Green Tea,Drink,Sat,1,sunny,10,1,0.15,450,47,17978
+2026-01-10,Fukuoka,P002,Coffee Beans,Drink,Sat,1,sunny,12,0,0.00,980,22,21560
+2026-01-10,Tokyo,P003,Notebook,Stationery,Sat,1,cloudy,12,0,0.00,320,23,7360
+2026-01-10,Osaka,P004,USB Cable,Electronics,Sat,1,rainy,14,0,0.00,900,16,14400
+2026-01-11,Fukuoka,P001,Green Tea,Drink,Sun,1,sunny,11,0,0.00,450,34,15300
+2026-01-11,Tokyo,P002,Coffee Beans,Drink,Sun,1,cloudy,13,0,0.00,980,30,29400
+2026-01-11,Osaka,P003,Notebook,Stationery,Sun,1,rainy,13,0,0.00,320,20,6400
+2026-01-11,Nagoya,P004,USB Cable,Electronics,Sun,1,sunny,15,1,0.10,900,20,16200
+2026-01-12,Tokyo,P001,Green Tea,Drink,Mon,0,cloudy,12,0,0.00,450,25,11250
+2026-01-12,Osaka,P002,Coffee Beans,Drink,Mon,0,rainy,15,0,0.00,980,15,14700
+2026-01-12,Nagoya,P003,Notebook,Stationery,Mon,0,sunny,14,0,0.00,320,25,8000
+2026-01-12,Fukuoka,P004,USB Cable,Electronics,Mon,0,cloudy,12,0,0.00,900,6,5400
+2026-01-13,Osaka,P001,Green Tea,Drink,Tue,0,rainy,14,0,0.00,450,18,8100
+2026-01-13,Nagoya,P002,Coffee Beans,Drink,Tue,0,sunny,16,0,0.00,980,18,17640
+2026-01-13,Fukuoka,P003,Notebook,Stationery,Tue,0,cloudy,11,0,0.00,320,19,6080
+2026-01-13,Tokyo,P004,USB Cable,Electronics,Tue,0,rainy,13,0,0.00,900,18,16200
+2026-01-14,Nagoya,P001,Green Tea,Drink,Wed,0,sunny,15,0,0.00,450,30,13500
+2026-01-14,Fukuoka,P002,Coffee Beans,Drink,Wed,0,cloudy,12,0,0.00,980,12,11760
+2026-01-14,Tokyo,P003,Notebook,Stationery,Wed,0,rainy,12,1,0.15,320,30,8160
+2026-01-14,Osaka,P004,USB Cable,Electronics,Wed,0,sunny,14,0,0.00,900,16,14400
+2026-01-15,Fukuoka,P001,Green Tea,Drink,Thu,0,cloudy,11,0,0.00,450,24,10800
+2026-01-15,Tokyo,P002,Coffee Beans,Drink,Thu,0,rainy,14,0,0.00,980,20,19600
+2026-01-15,Osaka,P003,Notebook,Stationery,Thu,0,sunny,13,0,0.00,320,20,6400
+2026-01-15,Nagoya,P004,USB Cable,Electronics,Thu,0,sunny,16,0,0.00,900,13,11700
+2026-01-16,Tokyo,P001,Green Tea,Drink,Fri,0,rainy,13,0,0.00,450,23,10350
+2026-01-16,Osaka,P002,Coffee Beans,Drink,Fri,0,sunny,15,0,0.00,980,22,21560
+2026-01-16,Nagoya,P003,Notebook,Stationery,Fri,0,sunny,15,0,0.00,320,26,8320
+2026-01-16,Fukuoka,P004,USB Cable,Electronics,Fri,0,cloudy,17,0,0.00,900,7,6300
+2026-01-17,Osaka,P001,Green Tea,Drink,Sat,1,sunny,14,0,0.00,450,33,14850
+2026-01-17,Nagoya,P002,Coffee Beans,Drink,Sat,1,sunny,16,1,0.15,980,34,28322
+2026-01-17,Fukuoka,P003,Notebook,Stationery,Sat,1,cloudy,16,0,0.00,320,23,7360
+2026-01-17,Tokyo,P004,USB Cable,Electronics,Sat,1,rainy,13,0,0.00,900,22,19800
+2026-01-18,Nagoya,P001,Green Tea,Drink,Sun,1,sunny,15,0,0.00,450,31,13950
+2026-01-18,Fukuoka,P002,Coffee Beans,Drink,Sun,1,cloudy,18,0,0.00,980,22,21560
+2026-01-18,Tokyo,P003,Notebook,Stationery,Sun,1,rainy,12,0,0.00,320,27,8640
+2026-01-18,Osaka,P004,USB Cable,Electronics,Sun,1,sunny,15,0,0.00,900,21,18900
+2026-01-19,Fukuoka,P001,Green Tea,Drink,Mon,0,cloudy,17,0,0.00,450,26,11700
+2026-01-19,Tokyo,P002,Coffee Beans,Drink,Mon,0,rainy,14,0,0.00,980,13,12740
+2026-01-19,Osaka,P003,Notebook,Stationery,Mon,0,sunny,14,0,0.00,320,22,7040
+2026-01-19,Nagoya,P004,USB Cable,Electronics,Mon,0,cloudy,16,0,0.00,900,12,10800
+2026-01-20,Tokyo,P001,Green Tea,Drink,Tue,0,rainy,13,1,0.15,450,35,13388
+2026-01-20,Osaka,P002,Coffee Beans,Drink,Tue,0,sunny,16,0,0.00,980,24,23520
+2026-01-20,Nagoya,P003,Notebook,Stationery,Tue,0,cloudy,15,0,0.00,320,16,5120
+2026-01-20,Fukuoka,P004,USB Cable,Electronics,Tue,0,rainy,18,0,0.00,900,10,9000
+2026-01-21,Osaka,P001,Green Tea,Drink,Wed,0,sunny,14,0,0.00,450,27,12150
+2026-01-21,Nagoya,P002,Coffee Beans,Drink,Wed,0,cloudy,17,0,0.00,980,18,17640
+2026-01-21,Fukuoka,P003,Notebook,Stationery,Wed,0,rainy,16,0,0.00,320,23,7360
+2026-01-21,Tokyo,P004,USB Cable,Electronics,Wed,0,sunny,19,1,0.10,900,19,15390
+2026-01-22,Nagoya,P001,Green Tea,Drink,Thu,0,cloudy,16,0,0.00,450,21,9450
+2026-01-22,Fukuoka,P002,Coffee Beans,Drink,Thu,0,rainy,18,0,0.00,980,12,11760
+2026-01-22,Tokyo,P003,Notebook,Stationery,Thu,0,sunny,18,0,0.00,320,27,8640
+2026-01-22,Osaka,P004,USB Cable,Electronics,Thu,0,sunny,15,0,0.00,900,19,17100
+2026-01-23,Fukuoka,P001,Green Tea,Drink,Fri,0,rainy,17,0,0.00,450,24,10800
+2026-01-23,Tokyo,P002,Coffee Beans,Drink,Fri,0,sunny,20,0,0.00,980,20,19600
+2026-01-23,Osaka,P003,Notebook,Stationery,Fri,0,sunny,14,0,0.00,320,23,7360
+2026-01-23,Nagoya,P004,USB Cable,Electronics,Fri,0,cloudy,17,0,0.00,900,13,11700
+2026-01-24,Tokyo,P001,Green Tea,Drink,Sat,1,sunny,18,1,0.15,450,50,19125
+2026-01-24,Osaka,P002,Coffee Beans,Drink,Sat,1,sunny,16,0,0.00,980,33,32340
+2026-01-24,Nagoya,P003,Notebook,Stationery,Sat,1,cloudy,15,1,0.15,320,28,7616
+2026-01-24,Fukuoka,P004,USB Cable,Electronics,Sat,1,rainy,18,0,0.00,900,14,12600
+2026-01-25,Osaka,P001,Green Tea,Drink,Sun,1,sunny,15,1,0.15,450,46,17595
+2026-01-25,Nagoya,P002,Coffee Beans,Drink,Sun,1,cloudy,17,0,0.00,980,27,26460
+2026-01-25,Fukuoka,P003,Notebook,Stationery,Sun,1,rainy,17,0,0.00,320,27,8640
+2026-01-25,Tokyo,P004,USB Cable,Electronics,Sun,1,sunny,19,0,0.00,900,18,16200
+2026-01-26,Nagoya,P001,Green Tea,Drink,Mon,0,cloudy,16,1,0.15,450,32,12240
+2026-01-26,Fukuoka,P002,Coffee Beans,Drink,Mon,0,rainy,19,0,0.00,980,13,12740
+2026-01-26,Tokyo,P003,Notebook,Stationery,Mon,0,sunny,18,0,0.00,320,28,8960
+2026-01-26,Osaka,P004,USB Cable,Electronics,Mon,0,cloudy,21,0,0.00,900,17,15300
+2026-01-27,Fukuoka,P001,Green Tea,Drink,Tue,0,rainy,17,1,0.15,450,27,10328
+2026-01-27,Tokyo,P002,Coffee Beans,Drink,Tue,0,sunny,20,1,0.15,980,29,24157
+2026-01-27,Osaka,P003,Notebook,Stationery,Tue,0,cloudy,19,0,0.00,320,22,7040
+2026-01-27,Nagoya,P004,USB Cable,Electronics,Tue,0,rainy,17,0,0.00,900,16,14400
+2026-01-28,Tokyo,P001,Green Tea,Drink,Wed,0,sunny,19,1,0.15,450,44,16830
+2026-01-28,Osaka,P002,Coffee Beans,Drink,Wed,0,cloudy,21,0,0.00,980,15,14700
+2026-01-28,Nagoya,P003,Notebook,Stationery,Wed,0,rainy,16,0,0.00,320,20,6400
+2026-01-28,Fukuoka,P004,USB Cable,Electronics,Wed,0,sunny,18,0,0.00,900,15,13500
+2026-01-29,Osaka,P001,Green Tea,Drink,Thu,0,cloudy,20,0,0.00,450,27,12150
+2026-01-29,Nagoya,P002,Coffee Beans,Drink,Thu,0,rainy,18,0,0.00,980,18,17640
+2026-01-29,Fukuoka,P003,Notebook,Stationery,Thu,0,sunny,17,0,0.00,320,19,6080
+2026-01-29,Tokyo,P004,USB Cable,Electronics,Thu,0,sunny,20,0,0.00,900,17,15300
+2026-01-30,Nagoya,P001,Green Tea,Drink,Fri,0,rainy,17,1,0.15,450,31,11858
+2026-01-30,Fukuoka,P002,Coffee Beans,Drink,Fri,0,sunny,19,0,0.00,980,21,20580
+2026-01-30,Tokyo,P003,Notebook,Stationery,Fri,0,sunny,19,0,0.00,320,30,9600
+2026-01-30,Osaka,P004,USB Cable,Electronics,Fri,0,cloudy,21,0,0.00,900,10,9000
+2026-01-31,Fukuoka,P001,Green Tea,Drink,Sat,1,sunny,18,0,0.00,450,32,14400
+2026-01-31,Tokyo,P002,Coffee Beans,Drink,Sat,1,sunny,20,0,0.00,980,31,30380
+2026-01-31,Osaka,P003,Notebook,Stationery,Sat,1,cloudy,20,0,0.00,320,26,8320
+2026-01-31,Nagoya,P004,USB Cable,Electronics,Sat,1,rainy,22,1,0.10,900,25,20250
+2026-02-01,Tokyo,P001,Green Tea,Drink,Sun,1,sunny,19,0,0.00,450,43,19350
+2026-02-01,Osaka,P002,Coffee Beans,Drink,Sun,1,cloudy,22,0,0.00,980,24,23520
+2026-02-01,Nagoya,P003,Notebook,Stationery,Sun,1,rainy,21,0,0.00,320,24,7680
+2026-02-01,Fukuoka,P004,USB Cable,Electronics,Sun,1,sunny,19,0,0.00,900,19,17100
+2026-02-02,Osaka,P001,Green Tea,Drink,Mon,0,cloudy,21,0,0.00,450,28,12600
+2026-02-02,Nagoya,P002,Coffee Beans,Drink,Mon,0,rainy,23,0,0.00,980,19,18620
+2026-02-02,Fukuoka,P003,Notebook,Stationery,Mon,0,sunny,18,0,0.00,320,20,6400
+2026-02-02,Tokyo,P004,USB Cable,Electronics,Mon,0,cloudy,20,0,0.00,900,15,13500
+2026-02-03,Nagoya,P001,Green Tea,Drink,Tue,0,rainy,22,0,0.00,450,22,9900
+2026-02-03,Fukuoka,P002,Coffee Beans,Drink,Tue,0,sunny,19,0,0.00,980,22,21560
+2026-02-03,Tokyo,P003,Notebook,Stationery,Tue,0,cloudy,19,1,0.15,320,36,9792
+2026-02-03,Osaka,P004,USB Cable,Electronics,Tue,0,rainy,21,0,0.00,900,12,10800
+2026-02-04,Fukuoka,P001,Green Tea,Drink,Wed,0,sunny,18,0,0.00,450,25,11250
+2026-02-04,Tokyo,P002,Coffee Beans,Drink,Wed,0,cloudy,21,0,0.00,980,21,20580
+2026-02-04,Osaka,P003,Notebook,Stationery,Wed,0,rainy,20,0,0.00,320,25,8000
+2026-02-04,Nagoya,P004,USB Cable,Electronics,Wed,0,sunny,23,0,0.00,900,20,18000
+2026-02-05,Tokyo,P001,Green Tea,Drink,Thu,0,cloudy,20,0,0.00,450,25,11250
+2026-02-05,Osaka,P002,Coffee Beans,Drink,Thu,0,rainy,22,0,0.00,980,15,14700
+2026-02-05,Nagoya,P003,Notebook,Stationery,Thu,0,sunny,22,0,0.00,320,25,8000
+2026-02-05,Fukuoka,P004,USB Cable,Electronics,Thu,0,sunny,24,0,0.00,900,18,16200
+2026-02-06,Osaka,P001,Green Tea,Drink,Fri,0,rainy,21,0,0.00,450,27,12150
+2026-02-06,Nagoya,P002,Coffee Beans,Drink,Fri,0,sunny,23,1,0.15,980,25,20825
+2026-02-06,Fukuoka,P003,Notebook,Stationery,Fri,0,sunny,23,0,0.00,320,22,7040
+2026-02-06,Tokyo,P004,USB Cable,Electronics,Fri,0,cloudy,20,0,0.00,900,17,15300
+2026-02-07,Nagoya,P001,Green Tea,Drink,Sat,1,sunny,22,0,0.00,450,38,17100
+2026-02-07,Fukuoka,P002,Coffee Beans,Drink,Sat,1,sunny,25,0,0.00,980,32,31360
+2026-02-07,Tokyo,P003,Notebook,Stationery,Sat,1,cloudy,19,0,0.00,320,24,7680
+2026-02-07,Osaka,P004,USB Cable,Electronics,Sat,1,rainy,22,0,0.00,900,17,15300
+2026-02-08,Fukuoka,P001,Green Tea,Drink,Sun,1,sunny,24,0,0.00,450,35,15750
+2026-02-08,Tokyo,P002,Coffee Beans,Drink,Sun,1,cloudy,21,0,0.00,980,31,30380
+2026-02-08,Osaka,P003,Notebook,Stationery,Sun,1,rainy,21,0,0.00,320,30,9600
+2026-02-08,Nagoya,P004,USB Cable,Electronics,Sun,1,sunny,23,0,0.00,900,16,14400
+2026-02-09,Tokyo,P001,Green Tea,Drink,Mon,0,cloudy,20,1,0.15,450,36,13770
+2026-02-09,Osaka,P002,Coffee Beans,Drink,Mon,0,rainy,23,0,0.00,980,16,15680
+2026-02-09,Nagoya,P003,Notebook,Stationery,Mon,0,sunny,22,0,0.00,320,26,8320
+2026-02-09,Fukuoka,P004,USB Cable,Electronics,Mon,0,cloudy,25,0,0.00,900,16,14400
+2026-02-10,Osaka,P001,Green Tea,Drink,Tue,0,rainy,21,0,0.00,450,28,12600
+2026-02-10,Nagoya,P002,Coffee Beans,Drink,Tue,0,sunny,24,0,0.00,980,19,18620
+2026-02-10,Fukuoka,P003,Notebook,Stationery,Tue,0,cloudy,23,0,0.00,320,20,6400
+2026-02-10,Tokyo,P004,USB Cable,Electronics,Tue,0,rainy,26,1,0.10,900,24,19440
+2026-02-11,Nagoya,P001,Green Tea,Drink,Wed,0,sunny,23,0,0.00,450,31,13950
+2026-02-11,Fukuoka,P002,Coffee Beans,Drink,Wed,0,cloudy,25,0,0.00,980,22,21560
+2026-02-11,Tokyo,P003,Notebook,Stationery,Wed,0,rainy,25,0,0.00,320,23,7360
+2026-02-11,Osaka,P004,USB Cable,Electronics,Wed,0,sunny,22,0,0.00,900,17,15300
+2026-02-12,Fukuoka,P001,Green Tea,Drink,Thu,0,cloudy,24,0,0.00,450,25,11250
+2026-02-12,Tokyo,P002,Coffee Beans,Drink,Thu,0,rainy,27,0,0.00,980,21,20580
+2026-02-12,Osaka,P003,Notebook,Stationery,Thu,0,sunny,21,0,0.00,320,30,9600
+2026-02-12,Nagoya,P004,USB Cable,Electronics,Thu,0,sunny,24,0,0.00,900,14,12600
+2026-02-13,Tokyo,P001,Green Tea,Drink,Fri,0,rainy,25,0,0.00,450,24,10800
+2026-02-13,Osaka,P002,Coffee Beans,Drink,Fri,0,sunny,23,0,0.00,980,23,22540
+2026-02-13,Nagoya,P003,Notebook,Stationery,Fri,0,sunny,22,1,0.15,320,35,9520
+2026-02-13,Fukuoka,P004,USB Cable,Electronics,Fri,0,cloudy,25,0,0.00,900,17,15300
+2026-02-14,Osaka,P001,Green Tea,Drink,Sat,1,sunny,22,0,0.00,450,35,15750
+2026-02-14,Nagoya,P002,Coffee Beans,Drink,Sat,1,sunny,24,0,0.00,980,29,28420
+2026-02-14,Fukuoka,P003,Notebook,Stationery,Sat,1,cloudy,24,0,0.00,320,25,8000
+2026-02-14,Tokyo,P004,USB Cable,Electronics,Sat,1,rainy,26,0,0.00,900,24,21600

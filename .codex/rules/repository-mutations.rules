@@ -1,0 +1,94 @@
+# リポジトリ状態を変更するコマンドは人間の承認対象にします。
+#
+# これらのルールはコマンドを禁止するものではありません。Git の状態変更や
+# 変更の公開につながるコマンドを実行する前に、Codex がユーザーへ確認するための
+# prompt ルールです。
+
+prefix_rule(
+    pattern = ["git", ["add", "commit"]],
+    decision = "prompt",
+    justification = "ステージングとコミット作成はリポジトリ状態を変更するため明示的な承認が必要です。",
+    match = [
+        "git add README.md",
+        "git add .",
+        "git commit -m change",
+    ],
+    not_match = [
+        "git status",
+        "git diff",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", ["push", "pull", "fetch"]],
+    decision = "prompt",
+    justification = "リモート Git 操作は外部状態に影響するため明示的な承認が必要です。",
+    match = [
+        "git push origin main",
+        "git pull --rebase",
+        "git fetch origin",
+    ],
+    not_match = [
+        "git status",
+        "git remote -v",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", [
+        "checkout",
+        "switch",
+        "merge",
+        "rebase",
+        "reset",
+        "restore",
+        "clean",
+        "tag",
+        "worktree",
+    ]],
+    decision = "prompt",
+    justification = "作業ツリー、参照、ブランチ状態を変更するコマンドは承認が必要です。",
+    match = [
+        "git checkout feature/example",
+        "git switch main",
+        "git merge origin/main",
+        "git rebase main",
+        "git reset --soft HEAD~1",
+        "git restore README.md",
+        "git clean -fd",
+        "git tag v1.0.0",
+        "git worktree add ../repo-worktree",
+    ],
+    not_match = [
+        "git branch",
+        "git log --oneline",
+        "git stash list",
+        "git stash show stash@{0}",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "stash", [
+        "push",
+        "pop",
+        "apply",
+        "drop",
+        "clear",
+        "branch",
+        "create",
+        "store",
+    ]],
+    decision = "prompt",
+    justification = "Git stash の状態を変更するコマンドは承認が必要です。",
+    match = [
+        "git stash push",
+        "git stash pop",
+        "git stash apply",
+        "git stash drop stash@{0}",
+        "git stash clear",
+    ],
+    not_match = [
+        "git stash list",
+        "git stash show stash@{0}",
+    ],
+)
