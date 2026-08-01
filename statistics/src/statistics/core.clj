@@ -19,7 +19,6 @@
     {:ok true
      :value (reduce * (range 1 (inc n)))}))
 
-
 (defn permutation
   "順列"
   [n r]
@@ -57,20 +56,20 @@
     {:ok false
      :error "n and r must be integers"
      :data {:n n :r r}}
-    
+
     (or (neg? n) (neg? r))
     {:ok false
      :error "n and r must be non-negative"
      :data {:n n :r r}}
-    
+
     (zero? r)
     {:ok true
      :value 1}
-    
+
     (= n r)
     {:ok true
      :value 1}
-    
+
     :else
     (let [n-factorial (:value (factorial n))
           n-r-factorial (:value (factorial (- n r)))
@@ -80,9 +79,9 @@
 
 (def sample_list '(1 2 3 4 5 6 7 8 9 10 11 12 13 14))
 
-(defn -main [& args]
+(defn -main [& _args]
   (println (basic/average sample_list))
-  (println (basic/unbiased_variance 
+  (println (basic/unbiased_variance
             sample_list
             (count sample_list)
             (basic/average sample_list))))

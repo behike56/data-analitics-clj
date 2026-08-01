@@ -1,6 +1,6 @@
 (ns sales-forecast-practice.forecast-plot
-  (:require [scicloj.clay.v2.api :as clay] 
-            [scicloj.kindly.v4.kind :as kind] 
+  (:require [scicloj.clay.v2.api :as clay]
+            [scicloj.kindly.v4.kind :as kind]
             [tablecloth.api :as tc]))
 
 (defn load-sales-data
@@ -13,7 +13,7 @@
   (load-sales-data "data/sales_forecast_practice.csv"))
 
 (defn put_all_data
-  [all_data ]
+  [all_data]
   (println all_data))
 
 (def sales_forecast_practice
@@ -64,7 +64,7 @@
    {:$schema "https://vega.github.io/schema/vega-lite/v5.json"
     :description "商品別の合計販売数量"
     :data {:values (mapv #(update-keys % name)
-                          (tc/rows product_summary :as-maps))}
+                         (tc/rows product_summary :as-maps))}
     :mark {:type "bar" :tooltip true}
     :encoding {:x {:field "product-name"
                    :type "nominal"
@@ -85,7 +85,7 @@
    {:$schema "https://vega.github.io/schema/vega-lite/v5.json"
     :description "曜日別の平均販売数量"
     :data {:values (mapv #(update-keys % name)
-                          (tc/rows weekday_summary :as-maps))}
+                         (tc/rows weekday_summary :as-maps))}
     :mark {:type "bar" :tooltip true}
     :encoding {:x {:field "weekday"
                    :type "ordinal"
@@ -100,8 +100,6 @@
     :width 520
     :height 320
     :title "曜日別の平均販売数量"}))
-
-
 
 (def quantity-sold-histogram
   (kind/vega-lite
@@ -143,9 +141,9 @@
                :browse false}))
 
 (defn -main
-  [& args]
+  [& _args]
   (println "=== 商品別の合計販売数量の ===")
   (plot_diagram product_quantity_bar_chart "docs/product_quantity_bar_chart.html")
   (plot_diagram weekday_avg_quantity_bar_chart "docs/weekday_avg_quantity_bar_chart.html")
   (plot_diagram quantity-sold-histogram "docs/quantity-sold-histogram.html")
-  (plot_diagram sales-amount-histogram"docs/sales-amount-histogram.html"))
+  (plot_diagram sales-amount-histogram "docs/sales-amount-histogram.html"))

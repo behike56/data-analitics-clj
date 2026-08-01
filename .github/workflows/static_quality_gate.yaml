@@ -1,0 +1,77 @@
+name: Static quality gate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: static-quality-gate-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  workflow-quality:
+    name: Validate GitHub Actions workflows
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Run actionlint
+        uses: raven-actions/actionlint@205b530c5d9fa8f44ae9ed59f341a0db994aa6f8 # v2.1.2
+        with:
+          version: "1.7.12"
+
+      - name: Run zizmor
+        uses: zizmorcore/zizmor-action@6fc4b006235f201fdab3722e17240ab420d580e5 # v0.6.1
+        with:
+          advanced-security: false
+          annotations: true
+          online-audits: false
+          version: "1.28.0"
+
+  clojure-quality:
+    name: Check Clojure code
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up JDK
+        uses: actions/setup-java@03ad4de0992f5dab5e18fcb136590ce7c4a0ac95 # v5.6.0
+        with:
+          distribution: temurin
+          java-version: "25"
+
+      - name: Set up Clojure tools
+        uses: DeLaGuardo/setup-clojure@4c7a6f613e5089821bb3bb2a33a3ee115578580d # 13.6.1
+        with:
+          cli: 1.12.3.1577
+          clj-kondo: 2026.07.24
+          cljfmt: 0.16.4
+
+      - name: Resolve dependencies
+        run: make deps
+
+      - name: Lint source and test code
+        run: make lint
+
+      - name: Check formatting
+        run: make format-check
+
+      - name: Run unit tests
+        run: make test
+
+      - name: Load application namespaces
+        run: make smoke

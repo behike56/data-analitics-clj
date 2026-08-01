@@ -8,7 +8,7 @@
       tc/dataset
       (tc/rename-columns keyword)))
 
-(defn load_statistics 
+(defn load_statistics
   [data]
   (println "=== unit_price > 500 ===")
   (sts/show-over-500-price data)
@@ -54,4 +54,4 @@
   (println "=== 商品別売上個数合計 ===")
   (fp/put_product_summary fp/sales_forecast_practice)
   (println "=== 曜日別の平均販売数量 ===")
-  (println fp/average_sales_volume_by_day_of_the_week ))
+  (println fp/average_sales_volume_by_day_of_the_week))

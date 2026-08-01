@@ -9,9 +9,9 @@
   [x]
   (* x x))
 
-(defn sum-of-squared-deviations 
+(defn sum-of-squared-deviations
   "偏差平方和"
-  [all-data mean] 
+  [all-data mean]
   (reduce + 0
           (map #(square (- % mean))
                all-data)))
@@ -19,8 +19,8 @@
 (defn unbiased_variance
   "不偏分散"
   [all_data number_of_data average_n]
-  (/ 
-   (sum-of-squared-deviations all_data average_n) 
+  (/
+   (sum-of-squared-deviations all_data average_n)
    (double (- number_of_data 1))))
 
 (defn standard_deviation
@@ -28,14 +28,13 @@
   [number_of_data all_data mean]
   (Math/sqrt (/ (sum-of-squared-deviations all_data mean) number_of_data)))
 
-
 (defn normal-exponent [x mu sigma]
   (Math/exp
    (- (/ (Math/pow (- x mu) 2)
          (* 2.0 sigma sigma)))))
 
 (defn normal-pdf "正規分布"
-  [x mu sigma] 
+  [x mu sigma]
   (let [coefficient (/ 1.0
                        (* sigma
                           (Math/sqrt (* 2.0 Math/PI))))
