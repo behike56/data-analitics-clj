@@ -62,20 +62,16 @@ jobs:
           cljfmt: 0.16.4
 
       - name: Resolve dependencies
-        run: clojure -Spath
+        run: make deps
 
       - name: Lint source and test code
-        run: |
-          clj-kondo --lint data-analitics-clj/src
-          clj-kondo --lint statistics/src
-          clj-kondo --lint data-analitics-clj/test
-          clj-kondo --lint deps.edn
+        run: make lint
 
       - name: Check formatting
-        run: cljfmt check data-analitics-clj/src statistics/src data-analitics-clj/test
+        run: make format-check
 
       - name: Run unit tests
-        run: clojure -X:test
+        run: make test
 
       - name: Load application namespaces
-        run: clojure -M -e "(require 'core 'plot 'statistics.core)"
+        run: make smoke
