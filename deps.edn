@@ -3,4 +3,11 @@
         scicloj/tablecloth {:mvn/version "8.021"}
         org.scicloj/clay {:mvn/version "2.0.16"}}
  :aliases
- {:plot {:main-opts ["-m" "plot"]}}}
+ {:plot {:main-opts ["-m" "plot"]}
+  :test {:extra-paths ["data-analitics-clj/test"]
+         :extra-deps
+         {io.github.cognitect-labs/test-runner
+          {:git/tag "v0.5.1"
+           :git/sha "dfb30dd6605cb6c0efc275e1df1736f6e90d4d73"}}
+         :exec-fn cognitect.test-runner.api/test
+         :exec-args {:dirs ["data-analitics-clj/test"]}}}}

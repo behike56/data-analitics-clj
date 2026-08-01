@@ -111,7 +111,7 @@
     (/ numerator
        (Math/sqrt (* x-sum-squares y-sum-squares)))))
 
-(defn -main [& args]
+(defn -main [& _args]
   (println "=== unit_price > 500 ===")
   (show-over-500-price data)
   (println)
