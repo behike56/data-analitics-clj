@@ -1,0 +1,76 @@
+# ユーザー確認を残すべきリポジトリ参照コマンド。
+#
+# これらのコマンドは通常利用では読み取り専用に見えますが、コマンドラインの
+# 表面積が広く、フラグ次第で内容の大量表示や状態変更に近い挙動を取り得ます。
+# 配布用の共通ルールでは、sandbox 外実行時にユーザー確認を残します。
+
+prefix_rule(
+    pattern = ["git", ["diff", "log", "show", "blame"]],
+    decision = "prompt",
+    justification = "広範な Git 参照コマンドはリポジトリ内容の表示や危険なフラグを伴う可能性があるため確認します。",
+    match = [
+        "git diff",
+        "git log --oneline",
+        "git show HEAD",
+        "git blame README.md",
+    ],
+    not_match = [
+        "git status",
+        "git ls-files",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "branch"],
+    decision = "prompt",
+    justification = "git branch はフラグ次第でブランチ参照を変更できるため確認します。",
+    match = [
+        "git branch",
+        "git branch --show-current",
+        "git branch -D old-branch",
+    ],
+    not_match = [
+        "git status",
+        "git log --oneline",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "remote", "-v"],
+    decision = "prompt",
+    justification = "Git remote URL は非公開リポジトリの場所や認証情報を含む可能性があるため確認します。",
+    match = [
+        "git remote -v",
+    ],
+    not_match = [
+        "git status",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "stash", ["list", "show"]],
+    decision = "prompt",
+    justification = "Git stash の参照は未コミット作業の内容を表示する可能性があるため確認します。",
+    match = [
+        "git stash list",
+        "git stash show stash@{0}",
+    ],
+    not_match = [
+        "git status",
+    ],
+)
+
+prefix_rule(
+    pattern = ["git", "config", ["--get", "--list", "-l"]],
+    decision = "prompt",
+    justification = "Git 設定はユーザー情報、remote 情報、credential helper 情報を含む可能性があるため確認します。",
+    match = [
+        "git config --get remote.origin.url",
+        "git config --list",
+        "git config -l",
+    ],
+    not_match = [
+        "git status",
+        "git config core.hooksPath hooks",
+    ],
+)

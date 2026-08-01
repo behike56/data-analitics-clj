@@ -1,0 +1,16 @@
+# このファイルは配布先で `<project>/.codex/config.toml` として配置される想定です。
+# プロジェクト設定はユーザー設定より優先されるため、モデル、プロバイダ、MCP、
+# 通知、ログ出力など個人差が大きい設定はここでは扱いません。
+
+# sandbox 内で完結する作業は進め、sandbox 外へ出る場合は承認を求めます。
+approval_policy = "on-request"
+
+# workspace 内の読み書きを許可しつつ、workspace 外へのアクセスは sandbox で制限します。
+sandbox_mode = "workspace-write"
+
+[sandbox_workspace_write]
+# 配布用の既定では、コマンド実行時のネットワークアクセスを許可しません。
+network_access = false
+
+# 追加の書き込み先は配布側では定義しません。
+# 必要な場合は利用者またはプロジェクト側で `writable_roots` を明示的に追加します。

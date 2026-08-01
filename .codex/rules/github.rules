@@ -1,0 +1,119 @@
+# GitHub CLI 用のルール。
+#
+# 読み取り系の GitHub 操作であっても、非公開リポジトリのメタデータや
+# アカウント情報を表示する可能性があります。そのため、配布用の共通ルールでは
+# allow ではなく prompt に留めます。
+
+prefix_rule(
+    pattern = ["gh", "auth", "status"],
+    decision = "prompt",
+    justification = "GitHub 認証状態の確認はアカウント情報を表示する可能性があるため確認します。",
+    match = [
+        "gh auth status",
+    ],
+)
+
+prefix_rule(
+    pattern = ["gh", "pr", ["list", "view", "diff", "checks"]],
+    decision = "prompt",
+    justification = "GitHub PR の参照はネットワークを使用し、非公開リポジトリ情報を表示する可能性があるため確認します。",
+    match = [
+        "gh pr list",
+        "gh pr view 123",
+        "gh pr diff 123",
+        "gh pr checks 123",
+    ],
+    not_match = [
+        "gh pr create --title change --body body",
+        "gh pr merge 123",
+    ],
+)
+
+prefix_rule(
+    pattern = ["gh", "issue", ["list", "view"]],
+    decision = "prompt",
+    justification = "GitHub issue の参照はネットワークを使用し、非公開リポジトリ情報を表示する可能性があるため確認します。",
+    match = [
+        "gh issue list",
+        "gh issue view 123",
+    ],
+    not_match = [
+        "gh issue create --title bug --body body",
+    ],
+)
+
+prefix_rule(
+    pattern = ["gh", "repo", "view"],
+    decision = "prompt",
+    justification = "GitHub リポジトリの参照はネットワークを使用し、非公開リポジトリ情報を表示する可能性があるため確認します。",
+    match = [
+        "gh repo view",
+        "gh repo view openai/codex",
+    ],
+    not_match = [
+        "gh repo clone openai/codex",
+    ],
+)
+
+prefix_rule(
+    pattern = ["gh", ["release", "workflow", "run"], ["list", "view"]],
+    decision = "prompt",
+    justification = "GitHub 情報の参照はネットワークを使用し、非公開リポジトリ情報を表示する可能性があるため確認します。",
+    match = [
+        "gh release list",
+        "gh release view v1.0.0",
+        "gh workflow list",
+        "gh workflow view ci.yml",
+        "gh run list",
+        "gh run view 123456",
+    ],
+    not_match = [
+        "gh release create v1.0.0",
+        "gh workflow disable ci.yml",
+        "gh run rerun 123456",
+    ],
+)
+
+prefix_rule(
+    pattern = ["gh", "pr", "checkout"],
+    decision = "prompt",
+    justification = "GitHub PR の checkout はローカル Git 状態を変更するため確認します。",
+    match = [
+        "gh pr checkout 123",
+    ],
+    not_match = [
+        "gh pr view 123",
+        "gh pr list",
+    ],
+)
+
+prefix_rule(
+    pattern = ["gh", ["pr", "issue", "release", "workflow", "run"], [
+        "create",
+        "edit",
+        "close",
+        "reopen",
+        "delete",
+        "merge",
+        "rerun",
+        "cancel",
+        "watch",
+        "enable",
+        "disable",
+    ]],
+    decision = "prompt",
+    justification = "GitHub への書き込み操作は外部状態を変更するため明示的な承認が必要です。",
+    match = [
+        "gh pr create --title change --body body",
+        "gh pr edit 123 --add-label ready",
+        "gh pr merge 123",
+        "gh issue create --title bug --body body",
+        "gh workflow disable ci.yml",
+        "gh run rerun 123456",
+    ],
+    not_match = [
+        "gh pr view 123",
+        "gh issue list",
+        "gh repo view",
+    ],
+)

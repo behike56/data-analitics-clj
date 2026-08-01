@@ -67,11 +67,12 @@ jobs:
       - name: Lint source and test code
         run: |
           clj-kondo --lint data-analitics-clj/src
+          clj-kondo --lint statistics/src
           clj-kondo --lint data-analitics-clj/test
           clj-kondo --lint deps.edn
 
       - name: Check formatting
-        run: cljfmt check data-analitics-clj/src data-analitics-clj/test
+        run: cljfmt check data-analitics-clj/src statistics/src data-analitics-clj/test
 
       - name: Run unit tests
         run: clojure -X:test
